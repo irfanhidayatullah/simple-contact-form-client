@@ -1,0 +1,10 @@
+services:
+  client-contact-form:
+    build: .
+    image: client-contact-form:1.0.0
+    container_name: client-contact-form
+    restart: on-failure
+    ports:
+      - "3000:3000"
+    environment:
+      - API_URL=http://host.docker.internal:8080
